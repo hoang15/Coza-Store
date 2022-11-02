@@ -1,8 +1,19 @@
-<div class="">
-  <img src="{{ product?.image }}" alt="" />
+<a href="" style="margin: 20px">Back store</a>
 
-  <p>title: {{ product?.title }}</p>
-  <p>price: {{ product?.price }}</p>
-  <p>description: {{ product?.description }}</p>
-  <p>title: {{ product?.category }}</p>
+<div class="container-xl">
+  <div class="row">
+    <div class="col-sm">
+      <img class="img" src="{{ product?.image }}" alt="" />
+    </div>
+
+    <div class="col-sm">
+      <p class="title">{{ product?.title }}</p>
+      <p class="price">
+        <strong>Price: {{ product?.price }} $</strong>
+      </p>
+      <p class="description">Description: {{ product?.description }}</p>
+      <p class="category">Category: {{ product?.category }}</p>
+      <button class="btn btn-success">Add to cart</button>
+    </div>
+  </div>
 </div>

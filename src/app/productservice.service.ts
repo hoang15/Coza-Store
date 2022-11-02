@@ -8,7 +8,7 @@ export interface Product {
   category: string;
   description: string;
   image: any;
-  rate: any;
+  rating: any;
 }
 
 @Injectable({
