@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { LoginComponent } from './components/login/login.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,14 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     AllProductsComponent,
     DetailProductComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([{ path: 'home', component: ContenComponent }]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
