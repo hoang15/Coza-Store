@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { DetailProductComponent } from './components/detail-product/detail-product.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,21 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     AllProductsComponent,
     DetailProductComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {
+        path: 'products/:id',
+        component: DetailProductComponent,
+      },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
