@@ -11,8 +11,19 @@
       <p class="price">
         <strong>Price: {{ product?.price }} $</strong>
       </p>
+
+      <span>Quantity: </span>
+      <input type="number" min="0" value="1" style="text-align: center" />
       <p class="description">Description: {{ product?.description }}</p>
-      <p class="category">Category: {{ product?.category }}</p>
+      <p class="category">
+        Category:
+        <a href=""
+          ><i>{{ product?.category }}</i></a
+        >
+      </p>
+
+      <span id="rateMe1"></span>
+
       <button class="btn btn-success">Add to cart</button>
     </div>
   </div>
