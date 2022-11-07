@@ -16,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 >>>>>>> cec67601acb4a202730fd5d9f0672693bd4148b5
 import { RouterModule } from '@angular/router';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
     AllProductsComponent,
     DetailProductComponent,
     LoginComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'products/:id',
         component: DetailProductComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
       },
     ]),
 >>>>>>> cec67601acb4a202730fd5d9f0672693bd4148b5

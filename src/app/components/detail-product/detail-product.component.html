@@ -11,8 +11,42 @@
       <p class="price">
         <strong>Price: {{ product?.price }} $</strong>
       </p>
+
+      <span>Quantity: </span>
+      <input type="number" min="0" value="1" style="text-align: center" />
       <p class="description">Description: {{ product?.description }}</p>
-      <p class="category">Category: {{ product?.category }}</p>
+      <p class="category">
+        Category:
+        <a href=""
+          ><i>{{ product?.category }}</i></a
+        >
+      </p>
+
+      <ul
+        class="list-inline rating-list"
+        *ngFor="let star of stars"
+        style="display: inline-block"
+      >
+        <li>
+          <i class="fa fa-star">
+            <input type="hidden" value="{{ product?.rating.rate }}" />
+          </i>
+        </li>
+      </ul>
+
+      <ul class="list-inline rating-list" style="display: inline-block">
+        <li>
+          <i class="fa fa-star"
+            ><input
+              type="hidden"
+              class="rating"
+              value="{{ product?.rating.rate }}"
+            />
+          </i>
+          <p>{{ product?.rating.rate }}</p>
+        </li>
+      </ul>
+
       <button class="btn btn-success">Add to cart</button>
     </div>
   </div>

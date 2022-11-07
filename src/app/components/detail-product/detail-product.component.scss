@@ -9,7 +9,7 @@
 }
 .container-xl{ margin-top: 50px;}
 .btn-success{
-   margin-left: 50%;
+   margin-left: 30%;
 }
 .title{
     text-align: center;
@@ -26,3 +26,24 @@
     font-size: 20px;
 
 }
+.row{
+    background-color: lightblue;
+}
+
+
+.rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  
+  }
+  
+  .rating-list li:hover,
+  .rating-list li:hover ~ li, .rating-list li.selected {
+    color: #ffd700;
+  }
+  
+  .rating-list {
+    display: inline-block;
+    list-style: none;
+  }
