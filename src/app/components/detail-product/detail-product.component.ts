@@ -9,6 +9,7 @@ import { Product, ProductserviceService } from 'src/app/productservice.service';
 })
 export class DetailProductComponent implements OnInit {
   product: any;
+  stars: number[] = [1, 2, 3, 4, 5];
   constructor(
     private activatedRoute: ActivatedRoute,
     private productService: ProductserviceService
